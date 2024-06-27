@@ -19,8 +19,8 @@ function App() {
       const newUser = await userResponse.json();
 
       if (newUser.name) {
-        const { avatar_url, name, bio, login } = newUser;
-        setCurrentUser({ avatar_url, name, bio, login });
+        const { avatar_url, name, bio, login,location } = newUser;
+        setCurrentUser({ avatar_url, name, bio, login, location });
 
         const reposResponse = await fetch(`https://api.github.com/users/${user}/repos`);
         const newRepos = await reposResponse.json();
@@ -62,7 +62,10 @@ function App() {
               <div>
                 <h3>{currentUser.name}</h3>
                 <span>{currentUser.login}</span>
+                <p>{currentUser.location}</p>
                 <p>{currentUser.bio}</p>
+
+
               </div>
             </div>
           )}

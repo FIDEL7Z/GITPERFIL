@@ -1,11 +1,13 @@
 import './styles.css';
+import icon from '../../assets/GitHUb.png'; 
 
-const Header =()=> {
+const Header = () => {
   return (
     <header>
-        <h1>GITPERFIL</h1>
+      <img src={icon} alt="Ícone" className="icon" />
+      <h1>GITPERFIL</h1>
     </header>
-  )
-} 
+  );
+}
 
 export { Header };

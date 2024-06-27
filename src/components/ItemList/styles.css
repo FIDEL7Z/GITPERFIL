@@ -1,14 +1,38 @@
-.item-list{
-    margin: 24px 0;
-}
-.item-list strong{
-    color:#549BF5;
-    font-size: 24px;
-    margin: 24px 0;
-}
-
-.item-list p{
-    color: #999999;
-    font-size: 12px;
-    margin-top: 24px 0;
-}
+.item-list {
+    position: relative; 
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease; 
+  }
+  
+  .item-list strong {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .item-list p {
+    font-size: 14px;
+    color: #cccccc;
+    margin-top: 8px;
+  }
+  
+  .item-list hr {
+    margin-top: 16px;
+    border: 0;
+    border-top: 1px solid #555555;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
